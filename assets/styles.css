@@ -3,8 +3,7 @@
 }
 
 html {
-  
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   font-family: 'Tajawal', sans-serif;
   color: #444;
@@ -181,6 +180,7 @@ body {
 .header {
   position: fixed;
   top: 0;  
+  z-index: 100;
   width: 100%;
   padding: 0 1rem;
   background-color: white;
@@ -209,21 +209,41 @@ body {
 }
 
 .book-table {
+  min-width: 480px;
 }
 
-.book-table thead  {
-  /*border: 1px solid #999;*/
+.book-table th {
+  background-color: #fff;
 }
 
 .book-table td {
   padding: .4rem .2rem;
 }
 
-.book-table tbody tr:nth-child(odd) {  
+.book-table tbody {
+  color: #fff;
+}
+
+.book-table td:first-of-type, th:first-of-type {
+  position: sticky;
+  left: 0;
+}
+
+.book-table tbody td:first-of-type {
+  font-weight: bold;
+}
+
+.book-table td:first-of-type, .book-table td:nth-of-type(2),
+.book-table th:first-of-type, .book-table th:nth-of-type(2) {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.book-table tbody tr:nth-of-type(odd) td {  
   background-color: #26a69a;
 }
 
-.book-table tbody tr:nth-child(even) {
+.book-table tbody tr:nth-of-type(even) td {
   background-color: #2bbbad;
 }
 
