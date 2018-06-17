@@ -50,7 +50,7 @@ form.addEventListener('submit', e => {
   // Blocks default submit functionality
   e.preventDefault()
   // Creates a book object and inserts it into the list
-  book = createBook()
+  let book = createBook()
   bookArray.push(book)
   createBookElement(book)
   // Clean-up
@@ -135,10 +135,10 @@ document.addEventListener('click', e => {
     if (confirm("Are you sure you want to delete this book?")) {
       // Removes the book from the array
       let book = bookArray.find(b => b.id == id)      
-      bookIndex = bookArray.indexOf(book)
+      let bookIndex = bookArray.indexOf(book)
       bookArray.splice(bookIndex, 1)
       // Removes the book element from the table
-      bookElement = document.getElementById("book-" + id)
+      let bookElement = document.getElementById("book-" + id)
       bookTable.removeChild(bookElement)      
     }
     saveToStorage()
@@ -191,7 +191,7 @@ function storageAvailable(type) {
 // Saves to the localStorage
 const saveToStorage = () => {
   if (storageAvailable('localStorage')) {
-    dataString = JSON.stringify(bookArray)
+    let dataString = JSON.stringify(bookArray)
     localStorage.setItem("mylibrary.books", dataString)
     localStorage.setItem("mylibrary.index", index)
   }  
@@ -223,8 +223,8 @@ const populateArray = () => {
 // Reloads data from the localStorage
 const reloadFromStorage = () => {
   if (storageAvailable('localStorage')) {
-    dataArray = localStorage.getItem("mylibrary.books")
-    storedIndex = localStorage.getItem("mylibrary.index")
+    let dataArray = localStorage.getItem("mylibrary.books")
+    let storedIndex = localStorage.getItem("mylibrary.index")
     if (dataArray) {
       bookArray = JSON.parse(dataArray)
       index = parseInt(storedIndex)
