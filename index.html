@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>    
+    <meta name="charset" content="UTF-8">
+    <title>Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="assets/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="modal-background hidden">
+      <div class="modal">
+        <div class="modal-box">
+          <div class="modal-header">
+            <h2 class="modal-title">New book</h2>
+            <button type="button" class="modal-dismiss">&times</button>
+          </div>
+
+          <form id="entry-form">
+            <div class="modal-body">
+              <div class="entry-field">  
+                <label for="entry-title" class="entry-label">Title</label>
+                <input type="text" class="entry-input" id="entry-title" autocomplete="off" autofocus required>
+              </div>
+              <div class="entry-field" class="entry-label">
+                <label for="entry-author">Author</label>
+                <input type="text" class="entry-input" id="entry-author" autocomplete="off" required>
+              </div>  
+              <div class="entry-field" class="entry-label">
+                <label for="entry-pages">Pages</label>
+                <input type="number" class="entry-input" id="entry-pages" min="1" optional>
+              </div>  
+              <div class="entry-field" class="entry-label">
+                <label id="entry-finished-label">
+                  <input type="checkbox" id="entry-finished" name="finished" value="1">Finished reading?
+                </label>          
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="submit" class="entry-submit">
+                <i class="fas fa-bookmark"></i> Save
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  
+    <header class="header">
+      <div class="wrapper header-items">
+        <h1 class="logo"><i class="fas fa-book"></i> My Library</h1>
+        <button class="new-book-button"><i class="fas fa-plus"></i> Add</button>        
+      </div>
+    </header>
+    <div class="wrapper">
+      <table class="book-table">
+        <thead>
+          <tr>
+            <th id="title-header">Title</th>
+            <th id="author-header">Author</th>
+            <th id="pages-header">Pages</th>
+            <th id="finished-header">Finished</th>
+            <th id="delete-header">Delete</th>
+          </tr>
+        </thead>
+        <tbody class="book-list">
+        </tbody>
+      </table>
+      
+    </div>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
