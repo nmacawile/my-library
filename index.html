@@ -49,29 +49,30 @@
         </div>
       </div>
     </div>
-  
-    <header class="header">
-      <div class="wrapper header-items">
-        <h1 class="logo">My Library</h1>
-        <button class="new-book-button"><i class="fas fa-plus"></i> Add</button>        
+    <main id="main">
+      <header class="header">
+        <div class="wrapper header-items">
+          <h1 class="logo">My Library</h1>
+          <button class="new-book-button"><i class="fas fa-plus"></i> Add</button>        
+        </div>
+      </header>
+      <div class="wrapper">
+        <table class="book-table">
+          <thead>
+            <tr>
+              <th id="title-header">Title</th>
+              <th id="author-header">Author</th>
+              <th id="pages-header">Pages</th>
+              <th id="finished-header">Read</th>
+              <th id="delete-header">Delete</th>
+            </tr>
+          </thead>
+          <tbody class="book-list">
+          </tbody>
+        </table>      
       </div>
-    </header>
-    <div class="wrapper">
-      <table class="book-table">
-        <thead>
-          <tr>
-            <th id="title-header">Title</th>
-            <th id="author-header">Author</th>
-            <th id="pages-header">Pages</th>
-            <th id="finished-header">Read</th>
-            <th id="delete-header">Delete</th>
-          </tr>
-        </thead>
-        <tbody class="book-list">
-        </tbody>
-      </table>
-      
-    </div>
+    </main>
+
     <script src="assets/script.js"></script>
   </body>
 </html>

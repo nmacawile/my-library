@@ -6,11 +6,18 @@ const fieldPages = document.querySelector("#entry-pages")
 const fieldFinished = document.querySelector("#entry-finished")
 
 // Form hide/show functions
+const mainContainer = document.querySelector("#main")
 const modalWrapper = document.querySelector(".modal-background")
 const btnModalClose = document.querySelector(".modal-dismiss")
 const btnModalOpen = document.querySelector(".new-book-button")
-const closeModal = e => modalWrapper.classList.add("hidden")
-const openModal = e => modalWrapper.classList.remove("hidden")
+const closeModal = e => { 
+  modalWrapper.classList.add("hidden")
+  mainContainer.classList.remove("blur")
+}
+const openModal = e => { 
+  modalWrapper.classList.remove("hidden")
+  mainContainer.classList.add("blur")
+}
 btnModalClose.addEventListener('click', closeModal)
 btnModalOpen.addEventListener('click', () => { 
   openModal()
